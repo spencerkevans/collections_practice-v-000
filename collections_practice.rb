@@ -32,5 +32,9 @@ def sum_array(arr)
 end
 
 def add_s(arr)
-	
+	special = arr[1]
+	arr.delete_at(1)
+	arr.map { |elem| elem << 's' }
+	arr.insert(1, special)
+	arr
 end
